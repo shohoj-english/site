@@ -7,5 +7,14 @@
         "file": "/blog/hsc-notebooklm.html"
       }
     ]
+  },
+  {
+    "category": "blog2",
+    "entries": [
+      {
+        "name": "HSC-NotebookLM2",
+        "file": "/blog2/hsc-notebooklm2.html"
+      }
+    ]
   }
 ]
