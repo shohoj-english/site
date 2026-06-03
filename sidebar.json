@@ -3,8 +3,9 @@
     "category": "blog",
     "entries": [
       {
-        "name": "HSC-NotebookLM",
-        "file": "/blog/hsc-notebooklm.html"
+        "name": "HSC-NotebookLM2",
+        "file": "/blog2/hsc-notebooklm2.html",
+        "comments": true
       }
     ]
   },
@@ -12,8 +13,9 @@
     "category": "blog2",
     "entries": [
       {
-        "name": "HSC-NotebookLM2",
-        "file": "/blog2/hsc-notebooklm2.html"
+        "name": "HSC-NotebookLM",
+        "file": "/blog/hsc-notebooklm.html",
+        "comments": true
       }
     ]
   }
