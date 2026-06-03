@@ -1,0 +1,8 @@
+__pycache__/
+
+config.local.json
+# secrets - never commit
+site_tools.config
+settings/
+*secret*
+*token*

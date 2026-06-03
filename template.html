@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{SITE_LANG}}" dir="{{SITE_DIR}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+  <link rel="stylesheet" href="{{STYLE_PATH}}">
+  <link rel="stylesheet" href="{{CONTENT_STYLE_PATH}}">
+  <link rel="stylesheet" href="{{ADVANCED_STYLE_PATH}}">
+</head>
+<body>
+{{VIDEO_BG}}
+  <header>
+    <button class="sidebar-toggle" onclick="toggleSidebar()">&#9776;</button>
+    <h1><a href="{{HOME_PATH}}">{{SITE_TITLE}}</a></h1>
+{{THEME_TOGGLE}}
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+{{SIDEBAR}}
+    </aside>
+    <main class="ck-content" style="padding-left: 20px !important; padding-right: 20px !important;">
+{{CONTENT}}
+    </main>
+{{COMMENTS}}
+  </div>
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+    function toggleCategory(header) {
+      header.classList.toggle('active');
+      header.querySelector('.arrow').classList.toggle('open');
+      header.nextElementSibling.classList.toggle('open');
+    }
+  </script>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      var b = document.body.classList.contains('dark-mode');
+      try { localStorage.setItem('theme', b ? 'dark' : 'light'); } catch(e) {}
+      document.querySelector('.theme-toggle').textContent = b ? '\uD83C\uDF19' : '\u2600\uFE0F';
+    }
+    (function() {
+      var btn = document.querySelector('.theme-toggle');
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved !== 'light') {
+          document.body.classList.add('dark-mode');
+          if (btn) btn.textContent = '\uD83C\uDF19';
+        }
+      } catch(e) {}
+    })();
+  </script>
+</body>
+</html>
