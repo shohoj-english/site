@@ -6,7 +6,7 @@
   <title>Page Not Found</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="content.css">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="advanced.css">
 </head>
 <body>
 
@@ -17,9 +17,22 @@
   </header>
   <div class="layout">
     <aside class="sidebar" id="sidebar">
+      <div class="sidebar-owner">
+        <div class="owner-name">Name</div>
+        <div class="owner-title">Job</div>
+        <div class="owner-bio">Bio</div>
+      </div>
       <div class="sidebar-top">
         <h2>Menu</h2>
         <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+      </div>
+      <div class="category">
+        <div class="category-header" onclick="toggleCategory(this)">
+          blog <span class="arrow">&#9654;</span>
+        </div>
+        <ul class="sub-links">
+          <li><a href="blog/hsc-notebooklm.html">HSC-NotebookLM</a></li>
+        </ul>
       </div>
     </aside>
     <main class="ck-content" style="padding-left: 20px !important; padding-right: 20px !important;">
